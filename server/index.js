@@ -13,8 +13,6 @@ app.get("/api/compliment", (req, res) => {
 					 "Cool shirt!",
 					 "Your Javascript skills are stellar.",
   ];
-
-  // choose random compliment
   let randomIndex = Math.floor(Math.random() * compliments.length);
   let randomCompliment = compliments[randomIndex];
 
@@ -55,29 +53,21 @@ const {
   res.status(200).send(randomWammy);
   return;
 })
-app.post("/api/sub", (req, res) => {
-  const sub = ["first name and last name already registered!", "Lets Get started", "This Is a keyLogger", "gotcha!"
-];
-let randomIndex4 = Math.floor(math.random() * sub.length);
-let randomSub = sub[randomIndex4];
-res.status(200).send(randomSub);
-return;
-})
 app.get("/api/wisdom", (req, res) => {
   const wisdom = ["Two is better than one!",
 					 "Good and evil are polar opposites!",
-					 "the sky is blue and the moon is cheese",
+					 "the sky is blue and the moon is cheese.",
   ];
   const {
     getWisdom
   } = require('./controller/ctrl.js')
   
-    // choose random compliment
-    let randomIndex5 = Math.floor(Math.random() * wisdom.length);
-    let randomWisdom = wisdom[randomIndex5];
+    let randomIndex4 = Math.floor(Math.random() * wisdom.length);
+    let randomWisdom = wisdom[randomIndex4];
   
     res.status(200).send(randomWisdom);
     return;
-  })
+  });
+
 
 app.listen(4000, () => console.log("Server running on 4000"));

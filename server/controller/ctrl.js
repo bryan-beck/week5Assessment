@@ -1,5 +1,5 @@
 module.exports = {
-    getWisdom: (req, res) => res.status(200).send(wisdom), 
+    getWisdom: (req, res) => res.status(200).send(wisdom),
     getWammy: (req, res) => res.status(200).send(wammy),
   getFortune: (req, res) => res.status(200).send(fortune),
   deleteFortune: (req, res) => {
@@ -15,12 +15,14 @@ module.exports = {
     fortune.push(newFortune);
     res.status(200).send(fortune);
     globalId++;
+    wisom.push(Wisdom);
     wammy.push(Wammy);
+    // wisom.push(Wisdom);
 res.status(200).send(wammy);
-globalId++;
-wisdom.push(newWisdom);
+// globalId++;
+// wisom.push(Wisdom);
 res.status(200).send(wisdom);
-globalId++;
+// globalID++;
   },
-}
+};
 
